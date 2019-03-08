@@ -95,7 +95,7 @@
 <meta property="og:site_name" content="柠檬冰丶呀">
 <meta property="og:description" content="Mybatis Mybatis是用java编写的持久层框架，底层封装操作数据库的细节，采用ORM(Object Relational Mappging 对象关系映射)使得数据库表中记录与javaBean属性对应:- 实体类中的属性和数据库表的字段名称保持一致 - 通过配置标签&amp;lt;resultMap&amp;gt;将javaBean属性名称和字段名称建立对应关系  在Mybatis中持久层的接口名称和映">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-18T11:35:21.084Z">
+<meta property="og:updated_time" content="2019-03-08T08:52:07.637Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="柠檬冰丶呀">
 <meta name="twitter:description" content="Mybatis Mybatis是用java编写的持久层框架，底层封装操作数据库的细节，采用ORM(Object Relational Mappging 对象关系映射)使得数据库表中记录与javaBean属性对应:- 实体类中的属性和数据库表的字段名称保持一致 - 通过配置标签&amp;lt;resultMap&amp;gt;将javaBean属性名称和字段名称建立对应关系  在Mybatis中持久层的接口名称和映">
@@ -386,10 +386,8 @@
 <li>在Mybatis中持久层的接口名称和映射文件也叫做：Mapper</li>
 <li>mybatis的映射配置文件位置和Dao接口的包结构相同，方便使用<package>指定Dao接口包加载时扫描到映射配置文件</package></li>
 <li>执行的是增删改的操作必须要commit</li>
-<li><p>使用连接池可以节省创建连接的时间，以空间成本换取时间成本，提高效率；mybatis使用自定义的连接池POOLED  UNPOOLED   JNDI均是DataSource接口的实现<br>  UNPOOLED没有使用连接池的思想  而是每次创建一个新的连接<br>  POOLED使用连接池的思想  一次性使用UNPOOLED创建多个连接缓存起来</p>
-</li>
-<li><p>表和表之间的关系：一对一    一对多 (多对一)    多对多</p>
-</li>
+<li>使用连接池可以节省创建连接的时间，以空间成本换取时间成本，提高效率；mybatis使用自定义的连接池POOLED  UNPOOLED   JNDI均是DataSource接口的实现<br>  UNPOOLED没有使用连接池的思想  而是每次创建一个新的连接<br>  POOLED使用连接池的思想  一次性使用UNPOOLED创建多个连接缓存起来<a id="more"></a></li>
+<li>表和表之间的关系：一对一    一对多 (多对一)    多对多</li>
 <li><p>在Mybatis中将上面的四种关系给简化成两种<br>  一对一: 从表实体应该包含一个主表实体的对象引用</p>
 <pre><code>一对一映射配置文件：使用&lt;association&gt;标签 property:javaBean中属性名称 ofType集合元素的数据类型
 </code></pre><p>  一对多: 主表实体应该包含从表实体的集合引用</p>

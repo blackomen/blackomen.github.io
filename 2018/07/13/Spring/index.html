@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="mybatis,java,">
+  <meta name="keywords" content="java,spring,">
 
 
 
@@ -88,18 +88,18 @@
 
 
 
-<meta name="description" content="Mybatis Mybatis是用java编写的持久层框架，底层封装操作数据库的细节，采用ORM(Object Relational Mappging 对象关系映射)使得数据库表中记录与javaBean属性对应:- 实体类中的属性和数据库表的字段名称保持一致 - 通过配置标签&amp;lt;resultMap&amp;gt;将javaBean属性名称和字段名称建立对应关系  在Mybatis中持久层的接口名称和映">
-<meta name="keywords" content="mybatis,java">
+<meta name="description" content="Spring IOC:降低程序间硬编码的过度耦合，管理对象之间的依赖关系，使用反射创建实例对象  创建bean的三种方式  默认调用类中的无参构造方法 spring 管理静态工厂-使用静态工厂的方法创建对象存入容器 spring 管理实例工厂-使用实例工厂的方法创建对象存入容器">
+<meta name="keywords" content="java,spring">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mybatis">
-<meta property="og:url" content="http://yoursite.com/2018/07/13/Mybatis/index.html">
+<meta property="og:title" content="Spring">
+<meta property="og:url" content="http://yoursite.com/2018/07/13/Spring/index.html">
 <meta property="og:site_name" content="柠檬冰丶呀">
-<meta property="og:description" content="Mybatis Mybatis是用java编写的持久层框架，底层封装操作数据库的细节，采用ORM(Object Relational Mappging 对象关系映射)使得数据库表中记录与javaBean属性对应:- 实体类中的属性和数据库表的字段名称保持一致 - 通过配置标签&amp;lt;resultMap&amp;gt;将javaBean属性名称和字段名称建立对应关系  在Mybatis中持久层的接口名称和映">
+<meta property="og:description" content="Spring IOC:降低程序间硬编码的过度耦合，管理对象之间的依赖关系，使用反射创建实例对象  创建bean的三种方式  默认调用类中的无参构造方法 spring 管理静态工厂-使用静态工厂的方法创建对象存入容器 spring 管理实例工厂-使用实例工厂的方法创建对象存入容器">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-08T09:34:26.860Z">
+<meta property="og:updated_time" content="2019-03-08T09:38:30.020Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mybatis">
-<meta name="twitter:description" content="Mybatis Mybatis是用java编写的持久层框架，底层封装操作数据库的细节，采用ORM(Object Relational Mappging 对象关系映射)使得数据库表中记录与javaBean属性对应:- 实体类中的属性和数据库表的字段名称保持一致 - 通过配置标签&amp;lt;resultMap&amp;gt;将javaBean属性名称和字段名称建立对应关系  在Mybatis中持久层的接口名称和映">
+<meta name="twitter:title" content="Spring">
+<meta name="twitter:description" content="Spring IOC:降低程序间硬编码的过度耦合，管理对象之间的依赖关系，使用反射创建实例对象  创建bean的三种方式  默认调用类中的无参构造方法 spring 管理静态工厂-使用静态工厂的方法创建对象存入容器 spring 管理实例工厂-使用实例工厂的方法创建对象存入容器">
 
 
 
@@ -129,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/07/13/Mybatis/">
+  <link rel="canonical" href="http://yoursite.com/2018/07/13/Spring/">
 
 
 
 
 
-  <title>Mybatis | 柠檬冰丶呀</title>
+  <title>Spring | 柠檬冰丶呀</title>
   
 
 
@@ -282,7 +282,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/13/Mybatis/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/13/Spring/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="柠檬冰丶呀">
@@ -299,7 +299,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Mybatis</h1>
+          <h1 class="post-title" itemprop="name headline">Spring</h1>
         
 
         <div class="post-meta">
@@ -365,7 +365,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  1.1k
+                  2.8k
                 </span>
               
 
@@ -381,7 +381,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  3
+                  10
                 </span>
               
             </div>
@@ -402,57 +402,262 @@
       
 
       
-        <h1 id="Mybatis"><a href="#Mybatis" class="headerlink" title="Mybatis"></a>Mybatis</h1><ul>
-<li>Mybatis是用java编写的持久层框架，底层封装操作数据库的细节，采用ORM(Object Relational Mappging 对象关系映射)<br>使得数据库表中记录与javaBean属性对应:<pre><code>- 实体类中的属性和数据库表的字段名称保持一致
-- 通过配置标签&lt;resultMap&gt;将javaBean属性名称和字段名称建立对应关系
+        <h1 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h1><ul>
+<li><p>IOC:降低程序间硬编码的过度耦合，管理对象之间的依赖关系，使用反射创建实例对象</p>
+</li>
+<li><p>创建bean的三种方式</p>
+<ul>
+<li>默认调用类中的无参构造方法</li>
+<li>spring 管理静态工厂-使用静态工厂的方法创建对象存入容器</li>
+<li>spring 管理实例工厂-使用实例工厂的方法创建对象存入容器<a id="more"></a></li>
+</ul>
+</li>
+<li><p>bean标签:</p>
+<ul>
+<li>id(name)：容器中唯一标识  name的命名规范较id比较松散 若均未定义Spring将使用”全限定类名#N”作为 bean的名称标识</li>
+<li>class：指定类的全限定类名反射创建对象,默认情况下调用无参构造函数</li>
+<li>scope：指定对象的作用范围<ul>
+<li>singleton :默认值，单例的</li>
+<li>prototype :多例的</li>
+<li>request :WEB项目中,Spring创建一个Bean的对象,将对象存入到request域中</li>
+<li>session :WEB项目中,Spring创建一个Bean的对象,将对象存入到session域中</li>
+<li>global session :WEB项目中,应用在集群环境.如果没有集群环境那么globalSession相当于session.<ul>
+<li>init-method：指定类中初始化方法名称。</li>
+<li>destroy-method：指定类中销毁方法名称。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Bean生命周期</p>
+<pre><code>单例对象：scope=&quot;singleton&quot; 一个应用只有一个对象的实例。它的作用范围就是整个引用
+    生命周期：&lt;容器状态一致&gt;
+多例对象：scope=&quot;prototype&quot; 每次访问对象时，都会重新创建对象实例
+    生命周期:&lt;对象状态一致&gt;
 </code></pre></li>
-<li>在Mybatis中持久层的接口名称和映射文件也叫做：Mapper<a id="more"></a></li>
-<li>mybatis的映射配置文件位置和Dao接口的包结构相同，方便使用<package>指定Dao接口包加载时扫描到映射配置文件</package></li>
-<li>执行的是增删改的操作必须要commit</li>
-<li><p>使用连接池可以节省创建连接的时间，以空间成本换取时间成本，提高效率；mybatis使用自定义的连接池POOLED  UNPOOLED   JNDI均是DataSource接口的实现<br>  UNPOOLED没有使用连接池的思想  而是每次创建一个新的连接<br>  POOLED使用连接池的思想  一次性使用UNPOOLED创建多个连接缓存起来</p>
+<li><p>DI:实例化对象时给对象属性赋值三种注入方式:</p>
+<ul>
+<li>赋值标识位置:<ul>
+<li>index:参数在构造函数参数列表的索引位置</li>
+<li>type:参数在构造函数中的数据类型</li>
+<li>name:参数在构造函数中的名称</li>
+</ul>
 </li>
-<li><p>表和表之间的关系：一对一    一对多 (多对一)    多对多</p>
+<li><p>赋值动作:SPEl表达式</p>
+<ul>
+<li>value:基本数据类型和String赋值</li>
+<li>ref:bean类型赋值</li>
+</ul>
 </li>
-<li><p>在Mybatis中将上面的四种关系给简化成两种<br>  一对一: 从表实体应该包含一个主表实体的对象引用</p>
-<pre><code>一对一映射配置文件：使用&lt;association&gt;标签 property:javaBean中属性名称 ofType集合元素的数据类型
-</code></pre><p>  一对多: 主表实体应该包含从表实体的集合引用</p>
-<pre><code>一对多映射配置文件：使用&lt;collection&gt;标签 property:javaBean中属性名称 javaType元素属性的数据类型
+<li><p>1.构造函数注入:类中需要提供一个对应参数列表的构造函数，获取bean时必须初始化实例对象 <constructor-arg></constructor-arg></p>
+</li>
+<li><p>2.set注入:类中需要提供注入成员的set方法，获取bean时只需提供必需初始化属性  <property></property></p>
+<ul>
+<li>p名称空间注入(本质调用类中set方法实现注入功能):在xml中导入p名称空间约束，使用p:propertyName来注入数据</li>
+<li>注入集合属性(本质为set注入):注入集合数据在注入集合数据时，只要结构相同，标签可以互换  <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">     List 结构中的标签</span><br><span class="line">         array      &gt;&gt;value</span><br><span class="line">         list</span><br><span class="line">         set</span><br><span class="line">     Map 结构中的标签</span><br><span class="line">         map &gt;&gt; entry &gt;&gt; key --&gt;value</span><br><span class="line">         props   &gt;&gt;  prop  &gt;&gt;    key</span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>3.注解注入</p>
+</li>
+</ul>
+</li>
+<li><p>加载核心容器：</p>
+<ul>
+<li>BeanFactory 和ApplicationContext 的区别：<pre><code>* ApplicationContext：只要一读取配置文件，默认情况下就会创建对象
+* BeanFactory：spring容器的顶层接口，什么使用什么时候创建对象
 </code></pre></li>
-<li><p>事务:为了完成某个业务需要执行一组(多个)SQL操作 这一组SQL操作要么同时成功 要么同时失败 注意：同一个事务中的多个操作必须保证使用的是同一个连接</p>
-<ul>
-<li><p>事务的四个特性：ACID是原子性（atomicity）、一致性（consistency）、隔离性 （isolation）和持久性（durability）</p>
-<ul>
-<li>原子性:事务包含的所有操作要么全部成功提交，要么全部失败回滚</li>
-<li>一致性: 事务执行前后数据库状态必须处于一致性状态</li>
-<li>隔离性:多个用户并发访问数据库时，多个并发事务之间要相互隔离</li>
-<li>持久性:事务一旦提交其对数据库中数据的改变就是永久性的</li>
-</ul>
-</li>
-<li><p>不考虑事务的隔离级别会造成的影响:</p>
-<ul>
-<li>脏读;一个事务在处理过程中读取了另一个事务中未提交的数据</li>
-<li>不可重复读:对于数据库中的某个数据，一个事务范围内多次查询却返回了不同的数据值.这是因为在查询间隔被另一个事务修改并提交了</li>
-<li>虚读(幻读):事务非独立执行时，读取了另一条已经提交的事务<ul>
-<li>幻读和不可重复读都是读取了另一条已经提交的事务（这点就脏读不同），所不同的是不可重复读查询的都是同一个数据项，而幻读针对的是一批数据整体（比如数据的个数）</li>
+<li>三种配置文件加载方式:<ul>
+<li>ClassPathXmlApplicationContext：<br>  从类的根路径下加载配置文件 推荐使用这种</li>
+<li>FileSystemXmlApplicationContext：<br>  从磁盘路径上加载配置文件，配置文件可以在磁盘的任意位置</li>
+<li>AnnotationConfigApplicationContext:<br>  使用注解配置容器对象使用此类读取注解创建spring容器</li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p>事务的隔离级别:设置数据库的隔离级别一定要是在开启事务之前且隔离级别的设置只对当前链接有效</p>
+</ul>
 <ul>
-<li>对于使用MySQL命令窗口而言，一个窗口就相当于一个链接，当前窗口设置的隔离级别只对当前窗口中的事务有效</li>
-<li>对于JDBC操作数据库来说，一个Connection对象相当于一个链接，而对于Connection对象设置的隔离级别只对该Connection对象有效，与其他链接Connection对象无关。</li>
+<li><p>IOC注解分类</p>
+<ul>
+<li><p>创建对象注入bean:</p>
+<ul>
+<li>@Component(value=””): 将当前类对象存入spring容器中，默认id为当前类名的首字母小写<ul>
+<li>spring支持java依赖注入规范中所提供的@Named注解作为@Component的替代方案</li>
+<li>Spring提供的用于明确标识三层架构使用的注解等同于@Component(可任意写)<ul>
+<li>@Controller:表现层  @Service:业务层   @Repository:持久层</li>
 </ul>
 </li>
-<li><p>MySQL数据库为我们提供的四种隔离级别：</p>
-<ul>
-<li>Serializable (串行化)：可避免脏读、不可重复读、幻读的发生。</li>
-<li>Repeatable read (可重复读)：可避免脏读、不可重复读的发生。MySQL的默认隔离级别</li>
-<li>Read committed (读已提交)：可避免脏读的发生。</li>
-<li>Read uncommitted (读未提交)：最低级别，任何情况都无法保证。</li>
+<li>XMl配置中指明spring在创建容器时要扫描的包 &lt;context:component-scan base-package=”springIOC”/&gt;</li>
 </ul>
 </li>
-<li>Oracle数据库中，只支持Serializable (串行化)级别和Read committed (读已提交)这两种级别，其中默认的为Read committed级别。</li>
+</ul>
+</li>
+<li><p>注入数据:</p>
+<ul>
+<li>@Autowired: 容器中存在唯一匹配的bean对象类型时自动按照类型注入，需提供set方法，注入属性可不提供<ul>
+<li>spring支持java依赖注入规范中所提供的@Inject注解作为@Autowired的替代方案</li>
+</ul>
+</li>
+<li>@Qualifier(value=””):按类型注入基础上再按照变量名注入     类成员注入时需要和@Autowired同时使用，注入方法参数可单独使用</li>
+<li>@Resource(name=””):直接按照bean名称注入<ul>
+<li>以上三种只能注入其他bean类型数据，基本数据类型和String类型无法使用上述注解注入，且集合类型只能通过XML配置注入</li>
+</ul>
+</li>
+<li>@Value(value=””):注入基本数据类型和String类型，可使用SpEL(Spring Expression Language)表达式<ul>
+<li>${表达式}:引用外部参数对应的property,字符串的拼接</li>
+<li>#{表达式}:可引用bean对象属性,SpEL表达式</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>作用范围:</p>
+<ul>
+<li>@Scope(value=””):指定bean的作用范围:singleton prototype request session global-session</li>
+</ul>
+</li>
+<li><p>生命周期:</p>
+<ul>
+<li>PreDestroy:初始化方法</li>
+<li>PostConstruct:销毁方法</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>@Configuration:指定当前类为spring配置类，创建容器时会从该类上加载注解 当配置类作为创建Context对象参数时可省略</p>
+</li>
+<li>@ComponentScan(value/basePackages=””  ):指明初始化容器时扫描包,默认扫描与配置类相同的包</li>
+<li>@ComponentScan(basePackageClasses = AccountDao.class)若basePackageClasses中包含类，这些类所在的包将会作为组件扫描的基础包</li>
+<li>@Bean(name =””):注入当前对象到容器中，只能注明在方法上，若方法带参需保证容器中存在对应类型的bean</li>
+<li>@Import(.class):导入其他配置类的字节码</li>
+<li><p>@propertySource(value=”classpath:”):引入外部properties文件配置</p>
+</li>
+<li><p>spring 整合junit进行单元测试(版本spring 5.x   +   junit 4.12+)</p>
+<ul>
+<li>@RunWith(SpringJUnit4ClassRunner.class):</li>
+<li>@ContextConfiguration()指明生成bean容器的方式:<ul>
+<li>XML配置 location=”classpath:”</li>
+<li>注解配置 classes=.class</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>动态代理:</p>
+<ul>
+<li>基于接口的动态代理:Proxy 被代理类最少实现一个接口<ul>
+<li>newProxyInstance方法的参数：<ul>
+<li>ClassLoader：类加载器<br>  它是用于加载代理对象字节码的。和被代理对象使用相同的类加载器。固定写法。</li>
+<li>Class[]：字节码数组<br>  它是用于让代理对象和被代理对象有相同方法。固定写法。</li>
+<li>InvocationHandler：用于提供增强的代码<br>  通常情况下都是匿名内部类，但不是必须的<ul>
+<li>invoke方法的参数: 执行代理对象的任何接口方法都会经过该方法<ul>
+<li>proxy   代理对象的引用</li>
+<li>method  当前执行的方法</li>
+<li>Object[] args     当前执行方法所需的参数</li>
+<li>基于子类的动态代理:Cglib 被代理类不能是最终类(即不能被final修饰)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>create方法的参数：<ul>
+<li>Class：它是用于指定被代理对象的字节码</li>
+<li>MethodInterceptor：用于提供增强的代码<br>  它是让我们写如何代理。我们一般都是些一个该接口的实现类，通常情况下都是匿名内部类，但不是必须的<ul>
+<li>invoke方法的参数: 执行代理对象的任何接口方法都会经过该方法<ul>
+<li>object o :   代理对象的引用</li>
+<li>method : 当前执行的方法</li>
+<li>Object[] args :    当前执行方法所需的参数</li>
+<li>methodProxy ：当前执行方法的代理对象</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>AOP:面向切面编程</p>
+<ul>
+<li>连接点JoinPoint:被拦截到的点spring中这些点指的是方法,因为spring只支持方法类型的连接点</li>
+<li>切入点Pointcut:对JoinPoint进行拦截的定义</li>
+<li>通知Advice:拦截到JoinPoint之后所要做的事情</li>
+<li>切面Aspect:切入点和通知（引介）的结合</li>
+<li>织入Weaving:把增强应用到目标对象来创建新的代理对象的过程。 spring采用动态代理织入，而AspectJ采用编译期织入和类装载期织入</li>
+<li>目标对象Target Object:代理的目标对象。</li>
+<li>AOP代理AOP Proxy:类被AOP织入增强后产生的结果代理类。</li>
+<li>引介Introduction:在不修改类代码的前提下在运行期为类动态地添加一些方法或属性</li>
+</ul>
+</li>
+<li><p>通知类型:</p>
+<ul>
+<li>前置通知（Before advice）           在某连接点之前执行的通知，但这个通知不能阻止连接点之前的执行流程（除非它抛出一个异常）。</li>
+<li>后置通知（After returning advice）  在某连接点正常完成后执行的通知：例如，一个方法没有抛出任何异常，正常返回</li>
+<li>异常通知（After throwing advice）  在方法抛出异常退出时执行的通知。</li>
+<li>最终通知（After (finally) advice）  当某连接点退出的时候执行的通知（不论是正常返回还是异常退出）</li>
+<li>环绕通知（Around Advice）           包围一个连接点的通知可以在方法调用前后完成自定义的行为其会选择是否继续执行连接点或直接返回它自己的返回值或抛出异常来结束执行。</li>
+</ul>
+</li>
+<li><p>基于@Aspect注解实现spring AOP的注解开发:</p>
+<ul>
+<li>@Aspect                表示当前类是一个切面类</li>
+<li>@Pointcut(“execution(<em> com.lemon.service.impl.</em>.*(..))”)     定义切入点表达式<br>   private void pointCut() {}</li>
+<li>@Before(“execution(<em> com.lemon.service.impl.</em>.*(..))”)             前置通知</li>
+<li>@Before(“pointCut()”)             前置通知</li>
+<li>@AfterReturning(“pointCut()”)     后置通知</li>
+<li>@AfterThrowing(“pointCut()”)      异常通知</li>
+<li>@After(“pointCut()”)              最终通知</li>
+<li>@Around(“pointCut()”)             环绕通知</li>
+<li>@EnableAspectJAutoProxy           配置spring开启注解AOP的支持</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>事务控制<ul>
+<li>PlatformTransactionManager是spring的事务管理器接口，实际开发中都是使用它的实现类<ul>
+<li>org.springframework.jdbc.datasource.DataSourceTransactionManager 使用Spring JDBC或iBatis 进行持久化数据时使用</li>
+<li>org.springframework.orm.hibernate5.HibernateTransactionManager 使用Hibernate版本进行持久化数据时使用</li>
+</ul>
+</li>
+<li>TransactionDefinition:事务的定义信息对象，里面有如下方法：<ul>
+<li>getName():获取事务对象名称</li>
+<li>getIsolationLevel():获取事务隔离级别  反映事务提交并发访问时的处理态度<ul>
+<li>isolation_default:默认级别</li>
+<li>isolation_read_uncommitted:可读取未提交数据</li>
+<li>isolation_read_committed:只能读取已提交数据，Oracle默认级别</li>
+<li>isolation_repeatable_read:是否读取其他事务提交修改后的数据    Mysql默认级别</li>
+<li>isolation_serializable:是否读取其他事务提交添加后的数据</li>
+</ul>
+</li>
+<li>getPropagationBehavior():获取事务传播行为<ul>
+<li>REQUIRED:如果当前没有事务，就新建一个事务，如果已经存在一个事务中则加入到这个事务中 （默认值）</li>
+<li>SUPPORTS:支持当前事务，如果当前没有事务，就以非事务方式执行（没有事务）</li>
+<li>MANDATORY：使用当前的事务，如果当前没有事务，就抛出异常</li>
+<li>REQUERS_NEW:新建事务，如果当前在事务中，把当前事务挂起</li>
+<li>NOT_SUPPORTED:以非事务方式执行操作，如果当前存在事务，就把当前事务挂起</li>
+<li>NEVER:以非事务方式运行，如果当前存在事务，抛出异常</li>
+<li>NESTED:如果当前存在事务，则在嵌套事务内执行。如果当前没有事务，则执行REQUIRED类似的操作</li>
+</ul>
+</li>
+<li>getTimeout():获取事务超时时间  默认值是-1，没有超时限制 若有则以秒为单位进行设置</li>
+<li>isReadOnly():获取事务是否只读   建议查询时设置为只读</li>
+</ul>
+</li>
+<li>TransactionStatus  此接口提供的是事务具体的运行状态<ul>
+<li>flush():刷新事务</li>
+<li>hasSavepoint():获取事务是否存在存储点</li>
+<li>isCompleted():获取事务是否完成</li>
+<li>isNewTransaction():获取事务是否为新事务</li>
+<li>isRollbackOnly():获取事务是否回滚</li>
+<li>setRollbackOnly():设置事务回滚</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>事务控制注解支持<ul>
+<li>@Transactional 事务支持  优先级：方法&gt;类&gt;接口</li>
+<li>@EnableTransactionManagement 配置事务通知</li>
 </ul>
 </li>
 </ul>
@@ -473,9 +678,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/mybatis/" rel="tag"><i class="fa fa-tag"></i> mybatis</a>
-          
             <a href="/tags/java/" rel="tag"><i class="fa fa-tag"></i> java</a>
+          
+            <a href="/tags/spring/" rel="tag"><i class="fa fa-tag"></i> spring</a>
           
         </div>
       
@@ -488,15 +693,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/13/Spring/" rel="next" title="Spring">
-                <i class="fa fa-chevron-left"></i> Spring
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/07/13/Mybatis/" rel="prev" title="Mybatis">
+                Mybatis <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -677,7 +882,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Mybatis"><span class="nav-number">1.</span> <span class="nav-text">Mybatis</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Spring"><span class="nav-number">1.</span> <span class="nav-text">Spring</span></a></li></ol></div>
             
 
           </div>

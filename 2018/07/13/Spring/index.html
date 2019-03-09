@@ -788,6 +788,9 @@
           
 
   
+    <div id="gitalk-container"></div>
+	
+  
 
 
 
@@ -847,10 +850,10 @@
               
               
               <div class="site-state-item site-state-categories">
-                
+                <a href="/categories/index.html">
                   <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">categories</span>
-                
+                </a>
               </div>
             
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="380" height="86" src="//music.163.com/outchain/player?type=2&id=462231369&auto=1&height=66"></iframe>
@@ -1156,6 +1159,21 @@
 
 
 
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: 'ff360fcb5a57934bc062',
+          clientSecret: 'dffb9b9065812c9332422c052a3ece9b793bb6d4',
+          repo: 'blackomen.github.io',
+          owner: 'blackomen',
+          admin: ['blackomen'],
+          id: location.pathname,
+          distractionFreeMode: 'true'
+        })
+        gitalk.render('gitalk-container')           
+       </script>
 
   
 
